@@ -1,0 +1,431 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8bd7eb;
+}
+
+.container {
+    max-width: 2400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header styles */
+header {
+    background-color: #1c389c;
+    color: #a5c6f7;
+    padding: 20px 0;
+    margin-bottom:0px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-right: auto; /* the navigation to the right */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+  color: #c2cbf4;
+  text-decoration: none;
+  padding: 5px 10px; /* Added padding for better clickability */
+  border-radius: 5px; /* Added border radius for button-like appearance */
+  transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+nav ul li a:hover {
+  background-color: #4CAF50; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Hero styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #a5c6f7, #4a4e4d);
+    color: #8bd7eb;
+    text-align: center;
+    padding: 200px 0;
+    margin-top: 0;
+}
+
+.hero h2 {
+  margin-top: 0;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.centered-image {
+    margin-top: 20px;
+    border-radius: ;
+}
+
+.centered-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    color: #ff0000;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    flex: 0 0 auto; /*prevent the logo from stretching */
+}
+
+.logo img {
+    height: 50px; /* Adjust the height of the logo */
+    width: 50; /* Maintain aspect ratio */
+}
+
+button {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 48px;
+    width: 160px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 55px;
+    -webkit-box-reflect: bottom 1px linear-gradient(transparent, #0004);
+  }
+  
+  button span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    text-align: center;
+    background: #2e2e2e;
+    color: rgba(255, 255, 255, 0.781);
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  button:hover span {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    background: linear-gradient(
+      45deg,
+      #91155d,
+      #525296,
+      #0f0,
+      #ff0,
+      #fb0094,
+      #00f,
+      #0f0,
+      #ff0
+    );
+    animation: animate123 20% linear infinte;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 400%;
+    filter: blur(20px);
+    transition: 0.5s;
+    background: linear-gradient(
+      45deg,
+      #91155d,
+      #525296,
+      #0f0,
+      #ff0,
+      #fb0094,
+      #00f,
+      #0f0,
+      #ff0
+    );
+    animation: animate123 20% linear infinte;
+  }
+  
+  button:hover::before,
+  button:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes animate123 {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 300% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  button span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+
+
+
+  .connect-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .connect-button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+
+  .column {
+    display: grid;
+    gap :1em;
+    grid-template-columns: 1fr;
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.portfolio-card{
+
+    background: rgb(69, 101, 242);
+    border-radius: 10px 10px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    padding-right: .5rem;
+
+}
+
+/*
+
+.grid-col-span-2 {
+    background:#141414;
+    grid-column: span 2;
+
+
+}
+
+.grid-col-span-3 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+.grid-col-span-6 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+
+.grid-col-span-7 {
+    background:#ead480;
+    grid-column: span 3;
+
+}
+*/
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px 10px;
+}
+/* later to be deleted
+.grid-col-span-3{
+    background:#75cdf3;
+    grid-column: span 3;
+    max-height: 30rem;
+}
+
+.grid-col-span-3 .card__img {
+    max-height: 20rem;
+}
+*/
+
+/* this can be used for anything to make it responsive*/
+@media screen and (min-width: 60em) {
+    header {
+        background:#0006ac;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    
+.grid-col-span-2 {
+    background:#190274;
+    grid-column: span 2;
+
+
+}
+
+.grid-col-span-3 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+.grid-col-span-6 {
+    background:#ead480;
+    grid-column: span 2;
+
+}
+
+.grid-col-span-7 {
+    background:#ead480;
+    grid-column: span 3;
+
+}
+    .grid-col-span-3{
+        background:#75cdf3;
+        grid-column: span 3;
+        max-height: 30rem;
+    }
+    
+    .grid-col-span-3 .card__img {
+        max-height: 20rem;
+    }
+}
+
+
+
+
+.social-links {
+    text-align: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-links img {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Add rounded corners */
+  }
+
+
+  .resume-section {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .centered-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Add styling for the button */
+.centered-button button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff; /* White color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.centered-button button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+
+  
